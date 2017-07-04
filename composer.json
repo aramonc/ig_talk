@@ -1,0 +1,34 @@
+{
+  "name": "aramonc/ig_talk",
+  "description": "Iterators have been part of PHP since 5.0 and Generators in PHP 5.5. Yet they’re not often used. This could be attributed to the API being somewhat confusing, to the point that there’s a drinking game about it. Iterators & Generators can provide lots of benefits to long running scripts that process large amounts of data. We’ll look at a couple of practical uses for Iterators and Generators and compare resource use between a script that uses Iterators & Generators to process 1,000,000 records and one that doesn’t.",
+  "minimum-stability": "dev",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Adrian Cardenas",
+      "email": "arcardenas@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^7.0",
+    "monolog/monolog": "^1.22",
+    "mongodb/mongodb": "^1.1",
+    "vlucas/phpdotenv": "^2.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Arc\\IgTalk\\": "code/src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Arc\\IgTalk\\": "code/tests/"
+    }
+  },
+  "config": {
+    "vendor-dir": "code/vendor"
+  },
+  "require-dev": {
+    "fzaninotto/faker": "^1.6"
+  }
+}
