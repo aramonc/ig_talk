@@ -23,7 +23,10 @@
   "autoload-dev": {
     "psr-4": {
       "Arc\\IgTalk\\": "code/tests/"
-    }
+    },
+    "files": [
+      "code/src/Helpers.php"
+    ]
   },
   "config": {
     "vendor-dir": "code/vendor"
