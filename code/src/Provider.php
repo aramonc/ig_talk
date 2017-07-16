@@ -19,7 +19,7 @@ class Provider
                                         ->selectCollection('users');
     }
 
-    public function getPagedList(int $page = 0, int $limit = 100): array
+    public function getPagedList(int $page = 0, int $limit = 100): \Generator
     {
         $cursor = $this->collection->find(
             [],
@@ -29,14 +29,10 @@ class Provider
             ]
         );
 
-        $users = [];
-
         foreach ($cursor as $data) {
             /** @var $data BSONDocument */
-            $users[] = $this->createUserEntity($data->getArrayCopy());
+            yield $this->createUserEntity($data->getArrayCopy());
         }
-
-        return $users;
     }
 
     protected function createUserEntity(array $data): User
