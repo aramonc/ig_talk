@@ -12,8 +12,6 @@ require_once __DIR__ . "/../vendor/autoload.php";
 $logger = new Logger('log');
 $logger->pushHandler(new ErrorLogHandler());
 
-$user = new User();
-
 $startTime = microtime(true);
 $baseMemory = memory_get_usage();
 
