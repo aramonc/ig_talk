@@ -31,9 +31,9 @@ $logger->addInfo(
     ['time' => $startTime, 'memory' => toHumanReadable($baseMemory)]
 );
 
-for ($up = 0; $up < 10000; $up++) {
+for ($up = 0; $up < 1000; $up++) {
     $uc = 0;
-    foreach ($provider->getPagedList($up) as $user) {
+    foreach ($provider->getPagedList($up, 1000) as $user) {
         /** @var $user User */
         fwrite($emailLog, $user->email . "\n");
 
